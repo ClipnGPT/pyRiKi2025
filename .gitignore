@@ -149,15 +149,20 @@ cython_debug/
 *.bak
 *ClipnGPT*.*
 *secret.*
-AZiP*.*
 
+_cache/
+_config/
+_controls/
 _cv2data/
+_extensions/
+julius/
 temp/
 
 .DS_Store
 .vscode
 
-*.exe
+_v5_*.exe
+_v6_*.exe
 
 temp*
 
