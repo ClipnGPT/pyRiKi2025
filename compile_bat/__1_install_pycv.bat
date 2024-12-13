@@ -32,18 +32,18 @@ ECHO pandas==2.2.0
 
 ECHO;
 ECHO ----------
-ECHO 2024/10/14
+ECHO 2024/12/13
 ECHO ----------
 ECHO Python==3.12.7
-ECHO setuptools==75.2.0
-ECHO pyinstaller==6.11.0
+ECHO setuptools==75.6.0
+ECHO pyinstaller==6.11.1
 ECHO psutil==6.1.0
 ECHO websocket-client==1.8.0
 ECHO numpy==2.0.2
 ECHO opencv-python==4.10.0.84
 ECHO opencv-contrib-python==4.10.0.84
-ECHO pysimplegui==5.0.6
-ECHO matplotlib==3.9.2
+ECHO pysimplegui==5.0.7
+ECHO matplotlib==3.9.3
 ECHO pandas==2.2.3
 
 ECHO;
