@@ -16,22 +16,6 @@ PAUSE
 
 ECHO;
 ECHO ----------
-ECHO 2024/02/12
-ECHO ----------
-ECHO Python==3.12.1
-ECHO setuptools==69.1.0
-ECHO pyinstaller==6.4.0
-ECHO numpy==1.26.4
-ECHO psutil==5.9.8
-ECHO websocket-client==1.7.0
-ECHO opencv-python==4.9.0.80
-ECHO opencv-contrib-python==4.9.0.80
-ECHO pysimplegui==4.60.5
-ECHO matplotlib==3.8.2
-ECHO pandas==2.2.0
-
-ECHO;
-ECHO ----------
 ECHO 2024/12/13
 ECHO ----------
 ECHO Python==3.12.7
@@ -45,6 +29,23 @@ ECHO opencv-contrib-python==4.10.0.84
 ECHO pysimplegui==5.0.7
 ECHO matplotlib==3.9.3
 ECHO pandas==2.2.3
+
+ECHO;
+ECHO ----------
+ECHO 2024/12/21
+ECHO ----------
+ECHO Python==3.13.1
+ECHO setuptools==75.6.0
+ECHO pyinstaller==6.11.1
+ECHO psutil==6.1.1
+ECHO websocket-client==1.8.0
+ECHO numpy==2.2.0
+ECHO opencv-python==4.10.0.84
+ECHO opencv-contrib-python==4.10.0.84
+ECHO pysimplegui==5.0.7
+ECHO matplotlib==3.10.0
+ECHO pandas==2.2.3
+
 
 ECHO;
 ECHO -----
@@ -100,9 +101,9 @@ ECHO;
 ECHO ------
 ECHO vision
 ECHO ------
-rem python -m pip  install --upgrade numpy
-rem python -m pip  install --upgrade numpy==1.26.4
-    python -m pip  install --upgrade numpy==2.0.2
+    python -m pip  install --upgrade numpy
+rem python -m pip  install --upgrade numpy==2.0.2
+rem python -m pip  install --upgrade numpy==2.2.0
 rem python -m pip  install --upgrade opencv-python
 rem python -m pip  install --upgrade opencv-contrib-python
 rem python -m pip  install --upgrade opencv-python==4.9.0.80
