@@ -127,7 +127,7 @@ class qFace_class:
     def __init__(self, ): 
         self.face_procWidth  = 640
         self.face_procHeight = 480
-        self.face_casName    = '_cv2data/xml/_vision_opencv_face.xml'
+        self.face_casName    = '_datas/xml/_vision_opencv_face.xml'
         self.face_cascade    = cv2.CascadeClassifier(self.face_casName)
         self.face_haar_scale    = 1.1
         self.face_min_neighbors = 10

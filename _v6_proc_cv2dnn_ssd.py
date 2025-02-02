@@ -228,9 +228,9 @@ class proc_cv2dnn_ssd:
         self.proc_step = '1'
 
         # 定義ファイル
-        file_config  = '_cv2data/dnn/ssd/frozen_inference_graph.pb'
-        file_weights = '_cv2data/dnn/ssd/ssd_mobilenet_v2_coco_2018_03_29.pbtxt'
-        file_labels  = '_cv2data/dnn/ssd/labels.txt'
+        file_config  = '_datas/dnn/ssd/frozen_inference_graph.pb'
+        file_weights = '_datas/dnn/ssd/ssd_mobilenet_v2_coco_2018_03_29.pbtxt'
+        file_labels  = '_datas/dnn/ssd/labels.txt'
         threshold_score = 0.25
         threshold_nms   = 0.4
 

@@ -125,14 +125,14 @@ class proc_cvdetect:
 
         self.casName   = casName
         if (casName == 'cars'):
-            self.casName = '_cv2data/xml/_vision_opencv_cars.xml'
+            self.casName = '_datas/xml/_vision_opencv_cars.xml'
         if (casName == 'face'):
-            self.casName = '_cv2data/xml/_vision_opencv_face.xml'
+            self.casName = '_datas/xml/_vision_opencv_face.xml'
         if (casName == 'fullbody'):
-            self.casName = '_cv2data/xml/_vision_opencv_fullbody.xml'
+            self.casName = '_datas/xml/_vision_opencv_fullbody.xml'
         if (self.casName != 'none'):
             self.cas_nm  = self.casName[:-4]
-            self.cas_nm  = self.cas_nm.replace('_cv2data/xml/_vision_opencv_', '')
+            self.cas_nm  = self.cas_nm.replace('_datas/xml/_vision_opencv_', '')
             self.cascade = cv2.CascadeClassifier(self.casName)
             self.haar_scale    = 1.1
             self.min_neighbors = 10

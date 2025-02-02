@@ -228,11 +228,11 @@ class proc_cv2dnn_yolo:
         self.proc_step = '1'
 
         # 定義ファイル
-        file_config  = '_cv2data/dnn/yolov3/yolov3-tiny.cfg'
-        file_weights = '_cv2data/dnn/yolov3/yolov3-tiny.weights'
-        file_labels  = '_cv2data/dnn/yolov3/coco-labels.txt'
-        #file_config  = '_cv2data/dnn/yolov3/yolov3.cfg'
-        #file_weights = '_cv2data/dnn/yolov3/yolov3.weights'
+        file_config  = '_datas/dnn/yolov3/yolov3-tiny.cfg'
+        file_weights = '_datas/dnn/yolov3/yolov3-tiny.weights'
+        file_labels  = '_datas/dnn/yolov3/coco-labels.txt'
+        #file_config  = '_datas/dnn/yolov3/yolov3.cfg'
+        #file_weights = '_datas/dnn/yolov3/yolov3.weights'
         threshold_score = 0.25
         threshold_nms   = 0.4
 
