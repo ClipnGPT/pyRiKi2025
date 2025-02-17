@@ -34,7 +34,7 @@ ECHO;
 ECHO ----------
 ECHO 2025/02/16
 ECHO ----------
-ECHO Python==3.12.9
+ECHO Python==3.13.2
 ECHO setuptools==75.8.0
 ECHO pyinstaller==6.12.0
 ECHO psutil==7.0.0
@@ -101,7 +101,6 @@ ECHO ------
 ECHO vision
 ECHO ------
     python -m pip  install --upgrade numpy
-rem python -m pip  install --upgrade numpy==2.0.2
 rem python -m pip  install --upgrade numpy==2.2.0
 rem python -m pip  install --upgrade opencv-python
 rem python -m pip  install --upgrade opencv-contrib-python
