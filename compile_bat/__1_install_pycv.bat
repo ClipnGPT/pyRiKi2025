@@ -60,6 +60,8 @@ ECHO;
 ECHO -------
 ECHO etc
 ECHO -------
+    python -m pip  install --upgrade keyboard
+    python -m pip  install --upgrade mouse
     python -m pip  install --upgrade screeninfo
     python -m pip  install --upgrade pyautogui
     python -m pip  install --upgrade pywin32
