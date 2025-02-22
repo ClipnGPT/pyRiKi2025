@@ -26,7 +26,7 @@ ECHO websocket-client==1.8.0
 ECHO numpy==2.2.0
 ECHO opencv-python==4.10.0.84
 ECHO opencv-contrib-python==4.10.0.84
-ECHO pysimplegui==5.0.7
+rem  pysimplegui==5.0.7
 ECHO matplotlib==3.10.0
 ECHO pandas==2.2.3
 
@@ -42,7 +42,7 @@ ECHO websocket-client==1.8.0
 ECHO numpy==2.2.3
 ECHO opencv-python==4.10.0.84
 ECHO opencv-contrib-python==4.10.0.84
-ECHO pysimplegui==5.0.8
+rem  pysimplegui==5.0.8
 ECHO matplotlib==3.10.0
 ECHO pandas==2.2.3
 
@@ -71,7 +71,8 @@ ECHO -------
     python -m pip  install --upgrade pycryptodome
 
     python -m pip  install --upgrade matplotlib
-    python -m pip  install --upgrade pysimplegui
+rem python -m pip  install --upgrade pysimplegui
+    python -m pip  install --upgrade pillow
     python -m pip  install --upgrade pykakasi
 rem Å´ use vs code
     python -m pip  install --upgrade pylint

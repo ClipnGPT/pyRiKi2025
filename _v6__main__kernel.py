@@ -166,9 +166,10 @@ cam2Dev     = 'auto'
 
 
 
-# gui ルーチン
-import _v6__main__gui
-GUI  = _v6__main__gui.main_gui_class()
+# 2025/02/22 GUI廃止
+# # gui ルーチン
+# import _v6__main__gui
+# GUI  = _v6__main__gui.main_gui_class()
 
 
 
@@ -934,36 +935,37 @@ if __name__ == '__main__':
                                     qLangInp=qLangInp, qLangTrn=qLangTrn, qLangTxt=qLangTxt, qLangOut=qLangOut, )
             main_core.begin()
 
-        # ＧＵＩ表示
-
-        if (control == '_gui_'):
-            GUI.init(alpha_channel=0.7, )
-            GUI.open()
-            gui_disp = True
-            gui_time = time.time()
-
-        if (gui_disp == True):
-            GUI.statusSet('_STS_SPEECH_', qFunc.statusCheck(qBusy_s_inp, ), )
-            GUI.statusSet('_STS_RECORD_', qFunc.statusCheck(qBusy_d_rec, ), )
-            GUI.statusSet('_STS_TELEWORK_', qFunc.statusCheck(qBusy_d_telework, ), )
-        else:
-            x, y = qGUI.position()
-            if (x<100) and (y<100):
-                if (mouse_xy_zero == True):
-                    if ((time.time() - mouse_xy_time) > 3):
-                        GUI.init(alpha_channel=0.7, )
-                        GUI.open()
-                        gui_disp = True
-                        gui_time = time.time()
-                        try:
-                            qGUI.moveTo(0,101)
-                        except:
-                            pass
-                else:
-                    mouse_xy_zero = True
-                    mouse_xy_time = time.time()
-            else:
-                    mouse_xy_zero = False
+# 2025/02/22 GUI廃止
+#        # ＧＵＩ表示
+#
+#        if (control == '_gui_'):
+#            GUI.init(alpha_channel=0.7, )
+#            GUI.open()
+#            gui_disp = True
+#            gui_time = time.time()
+#
+#        if (gui_disp == True):
+#            GUI.statusSet('_STS_SPEECH_', qFunc.statusCheck(qBusy_s_inp, ), )
+#            GUI.statusSet('_STS_RECORD_', qFunc.statusCheck(qBusy_d_rec, ), )
+#            GUI.statusSet('_STS_TELEWORK_', qFunc.statusCheck(qBusy_d_telework, ), )
+#        else:
+#            x, y = qGUI.position()
+#            if (x<100) and (y<100):
+#                if (mouse_xy_zero == True):
+#                    if ((time.time() - mouse_xy_time) > 3):
+#                        GUI.init(alpha_channel=0.7, )
+#                        GUI.open()
+#                        gui_disp = True
+#                        gui_time = time.time()
+#                        try:
+#                            qGUI.moveTo(0,101)
+#                        except:
+#                            pass
+#                else:
+#                    mouse_xy_zero = True
+#                    mouse_xy_time = time.time()
+#            else:
+#                    mouse_xy_zero = False
 
         # スレッド応答
 
@@ -990,36 +992,37 @@ if __name__ == '__main__':
                         guide_disp = True
                         guide_time = time.time()
 
-        # ＧＵＩ表示（自動消去）
-
-        if (gui_disp == True):
-            event, values = GUI.read()
-            if (event in (None, '-exit-', '-cancel-')):
-                #print(event, values)
-                GUI.close()
-                gui_disp = False
-            if (event == '-ok-'):
-                #print(event, values)
-                GUI.close()
-                gui_disp = False
-            if (event[:5].lower() == 'riki,'):
-                #print(event, values)
-                GUI.close()
-                gui_disp = False
-                nowTime = datetime.datetime.now()
-                stamp   = nowTime.strftime('%Y%m%d.%H%M%S')
-                controld_file = qPath_s_ctrl + stamp + '.txt'
-                qFunc.txtsWrite(controld_file, txts=[event], encoding='utf-8', exclusive=True, mode='w', )
-                controld_file = qPath_v_ctrl + stamp + '.txt'
-                qFunc.txtsWrite(controld_file, txts=[event], encoding='utf-8', exclusive=True, mode='w', )
-                controld_file = qPath_d_ctrl + stamp + '.txt'
-                qFunc.txtsWrite(controld_file, txts=[event], encoding='utf-8', exclusive=True, mode='w', )
-            x, y = qGUI.position()
-            if (x==0) and (y==0):
-                gui_time = time.time()
-            if ((time.time() - gui_time) > 15):
-                GUI.close()
-                gui_disp = False
+# 2025/02/22 GUI廃止
+#        # ＧＵＩ表示（自動消去）
+#
+#        if (gui_disp == True):
+#            event, values = GUI.read()
+#            if (event in (None, '-exit-', '-cancel-')):
+#                #print(event, values)
+#                GUI.close()
+#                gui_disp = False
+#            if (event == '-ok-'):
+#                #print(event, values)
+#                GUI.close()
+#                gui_disp = False
+#            if (event[:5].lower() == 'riki,'):
+#                #print(event, values)
+#                GUI.close()
+#                gui_disp = False
+#                nowTime = datetime.datetime.now()
+#                stamp   = nowTime.strftime('%Y%m%d.%H%M%S')
+#                controld_file = qPath_s_ctrl + stamp + '.txt'
+#                qFunc.txtsWrite(controld_file, txts=[event], encoding='utf-8', exclusive=True, mode='w', )
+#                controld_file = qPath_v_ctrl + stamp + '.txt'
+#                qFunc.txtsWrite(controld_file, txts=[event], encoding='utf-8', exclusive=True, mode='w', )
+#                controld_file = qPath_d_ctrl + stamp + '.txt'
+#                qFunc.txtsWrite(controld_file, txts=[event], encoding='utf-8', exclusive=True, mode='w', )
+#            x, y = qGUI.position()
+#            if (x==0) and (y==0):
+#                gui_time = time.time()
+#            if ((time.time() - gui_time) > 15):
+#                GUI.close()
+#                gui_disp = False
 
         # ガイド表示（自動消去）
 
@@ -1050,11 +1053,12 @@ if __name__ == '__main__':
 
         qLog.log('info', main_id, 'terminate')
 
-        # ＧＵＩ終了
-
-        GUI.close()
-        GUI.terminate()
-        gui_disp = False
+# 2025/02/22 GUI廃止
+#        # ＧＵＩ終了
+#
+#        GUI.close()
+#        GUI.terminate()
+#        gui_disp = False
 
         # ガイド表示（終了）
 
