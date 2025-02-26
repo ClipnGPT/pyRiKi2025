@@ -61,7 +61,6 @@ qLog  = _v6__qLog.qLog_class()
 import  _v6__qGuide
 qGuide= _v6__qGuide.qGuide_class()
 
-qPLATFORM        = qRiKi.getValue('qPLATFORM'        )
 qRUNATTR         = qRiKi.getValue('qRUNATTR'         )
 qHOSTNAME        = qRiKi.getValue('qHOSTNAME'        )
 qUSERNAME        = qRiKi.getValue('qUSERNAME'        )
@@ -161,9 +160,9 @@ runMode     = 'chatbot'
 qApiInp     = 'free'
 qApiTrn     = 'free'
 qApiOut     = qApiTrn
-#if (qPLATFORM == 'windows'):
+#if (os.name == 'nt'):
 #    qApiOut = 'winos'
-if (qPLATFORM == 'darwin'):
+if (sys.platform == 'darwin'):
     qApiOut = 'macos'
 qLangInp    = 'ja'
 #qLangTrn    = 'en,fr,'

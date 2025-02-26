@@ -29,7 +29,7 @@ ECHO -------
 ECHO etc 1/2
 ECHO -------
     python -m pip  install --upgrade keyboard
-    python -m pip  install --upgrade mouse
+rem python -m pip  install --upgrade mouse Žg—p‹ÖŽ~
     python -m pip  install --upgrade screeninfo
     python -m pip  install --upgrade pyautogui
     python -m pip  install --upgrade pywin32

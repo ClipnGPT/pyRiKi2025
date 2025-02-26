@@ -10,6 +10,7 @@
 
 
 
+import sys
 import os
 import time
 
@@ -18,9 +19,6 @@ import psutil
 #import PySimpleGUI_key
 #PySimpleGUI_License=PySimpleGUI_key.PySimpleGUI_License
 import PySimpleGUI as sg
-
-import platform
-qPLATFORM = platform.system().lower() #windows,darwin,linux
 
 
 
@@ -366,7 +364,7 @@ class main_gui_class:
         #try:
         if True:
             no_titlebar = True
-            if (qPLATFORM == 'darwin'):
+            if (sys.platform == 'darwin'):
                 no_titlebar = False
             self.window = sg.Window('Power of AI, RiKi, ', layout,
                             keep_on_top=True,

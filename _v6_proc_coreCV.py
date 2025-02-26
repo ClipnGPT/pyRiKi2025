@@ -31,7 +31,6 @@ qFunc = _v6__qFunc.qFunc_class()
 import  _v6__qLog
 qLog  = _v6__qLog.qLog_class()
 
-qPLATFORM        = qRiKi.getValue('qPLATFORM'        )
 qRUNATTR         = qRiKi.getValue('qRUNATTR'         )
 qHOSTNAME        = qRiKi.getValue('qHOSTNAME'        )
 qUSERNAME        = qRiKi.getValue('qUSERNAME'        )
@@ -417,7 +416,7 @@ class proc_coreCV:
             #        )
 
             python_exe = 'python'
-            if (qPLATFORM == 'darwin'):
+            if (sys.platform == 'darwin'):
                 python_exe = 'python3'
 
             api = subprocess.Popen([python_exe, '_v6_api_vision.py',

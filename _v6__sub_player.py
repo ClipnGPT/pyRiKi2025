@@ -57,7 +57,6 @@ qLog  = _v6__qLog.qLog_class()
 
 
 
-qPLATFORM        = qRiKi.getValue('qPLATFORM'        )
 qRUNATTR         = qRiKi.getValue('qRUNATTR'         )
 qHOSTNAME        = qRiKi.getValue('qHOSTNAME'        )
 qUSERNAME        = qRiKi.getValue('qUSERNAME'        )
@@ -495,7 +494,7 @@ class main_player:
         for id in self.play_folder:
             if (os.name == 'nt'):
                 self.path_play[id] = self.path_winos + self.play_folder[id]
-            elif (qPLATFORM == 'darwin'):
+            elif (sys.platform == 'darwin'):
                 self.path_play[id] = self.path_macos + self.play_folder[id]
             else:
                 self.path_play[id] = self.path_linux + self.play_folder[id]

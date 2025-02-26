@@ -45,7 +45,6 @@ qCV2   =_v6__qFFmpeg.qCV2_class()
 import  _v6__qGuide
 qGuide= _v6__qGuide.qGuide_class()
 
-qPLATFORM        = qRiKi.getValue('qPLATFORM'        )
 qRUNATTR         = qRiKi.getValue('qRUNATTR'         )
 qHOSTNAME        = qRiKi.getValue('qHOSTNAME'        )
 qUSERNAME        = qRiKi.getValue('qUSERNAME'        )

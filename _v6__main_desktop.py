@@ -66,7 +66,6 @@ import  _v6__qGuide
 qGuide= _v6__qGuide.qGuide_class()
 qGuide2=_v6__qGuide.qGuide_class()
 
-qPLATFORM        = qRiKi.getValue('qPLATFORM'        )
 qRUNATTR         = qRiKi.getValue('qRUNATTR'         )
 qHOSTNAME        = qRiKi.getValue('qHOSTNAME'        )
 qUSERNAME        = qRiKi.getValue('qUSERNAME'        )
@@ -153,7 +152,7 @@ import _v6_proc_capture
 import _v6_proc_cvreader
 import _v6_proc_recorder
 import _v6_proc_telework
-if (qPLATFORM == 'windows'):
+if (os.name == 'nt'):
     import _v6_proc_uploader
 import _v6_proc_pointer
 
@@ -342,7 +341,7 @@ class main_desktop:
             uploader_switch  = 'on'
             pointer_switch   = 'on'
 
-        if (qPLATFORM != 'windows'):
+        if (os.name != 'nt'):
             uploader_switch  = 'off'
 
         # 実行優先順位設定

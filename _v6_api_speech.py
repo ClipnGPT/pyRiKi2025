@@ -45,7 +45,6 @@ qFunc = _v6__qFunc.qFunc_class()
 import  _v6__qLog
 qLog  = _v6__qLog.qLog_class()
 
-qPLATFORM        = qRiKi.getValue('qPLATFORM'        )
 qRUNATTR         = qRiKi.getValue('qRUNATTR'         )
 qHOSTNAME        = qRiKi.getValue('qHOSTNAME'        )
 qUSERNAME        = qRiKi.getValue('qUSERNAME'        )
@@ -129,9 +128,9 @@ qRdy__d_sendkey  = qRiKi.getValue('qRdy__d_sendkey'  )
 qApiInp    = 'free'
 qApiTrn    = qApiInp
 qApiOut    = qApiInp
-if (qApiOut == 'free') and (qPLATFORM == 'windows'):
+if (qApiOut == 'free') and (os.name == 'nt'):
     qApiOut = 'winos'
-if (qApiOut == 'free') and (qPLATFORM == 'darwin'):
+if (qApiOut == 'free') and (sys.platform == 'darwin'):
     qApiOut = 'macos'
 qLangInp   = 'ja'
 qLangTrn   = 'en,fr,'
@@ -160,11 +159,11 @@ import speech_api_hoya     as hoya_api
 import speech_api_hoya_key as hoya_key
 
 # winos 音声合成
-if (qPLATFORM == 'windows'):
+if (os.name == 'nt'):
     import speech_api_winos as winos_api
 
 # macos 音声合成
-if (qPLATFORM == 'darwin'):
+if (sys.platform == 'darwin'):
     import speech_api_macos as macos_api
 
 
@@ -471,9 +470,9 @@ def qVoiceOutput(useApi='free', outLang='en', outText='Hallo', outFile='temp/tem
     and (api != 'azure') and (api != 'aws') \
     and (api != 'winos') and (api != 'macos')  and (api != 'hoya'):
         api = 'free'
-        if (qPLATFORM == 'windows'):
+        if (os.name == 'nt'):
             api = 'winos'
-        if (qPLATFORM == 'darwin'):
+        if (sys.platform == 'darwin'):
             api = 'macos'
 
     apirun = True

@@ -24,9 +24,6 @@ import subprocess
 import numpy as np
 import cv2
 
-import platform
-qPLATFORM = platform.system().lower() #windows,darwin,linux
-
 # dummy import
 if (os.name == 'nt'):
     import comtypes.client
@@ -72,11 +69,10 @@ qLog  = _v6__qLog.qLog_class()
 import  _v6__qGuide
 qGuide= _v6__qGuide.qGuide_class()
 
-if (os.name == 'nt') or (qPLATFORM == 'darwin'):
+if (os.name == 'nt') or (sys.platform == 'darwin'):
     import  _v6__qFFmpeg
     qFFmpeg= _v6__qFFmpeg.qFFmpeg_class()
 
-qPLATFORM        = qRiKi.getValue('qPLATFORM'        )
 qRUNATTR         = qRiKi.getValue('qRUNATTR'         )
 qHOSTNAME        = qRiKi.getValue('qHOSTNAME'        )
 qUSERNAME        = qRiKi.getValue('qUSERNAME'        )
@@ -1566,7 +1562,7 @@ if __name__ == '__main__':
     # 最終カメラ番号
 
     camDev_max = 'none'
-    if (os.name == 'nt') or (qPLATFORM == 'darwin'):
+    if (os.name == 'nt') or (sys.platform == 'darwin'):
         cam, mic = qFFmpeg.ffmpeg_list_dev()
         if (len(cam) > 0):
             #print(cam)

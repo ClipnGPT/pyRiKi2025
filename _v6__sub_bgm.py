@@ -43,7 +43,6 @@ qFunc = _v6__qFunc.qFunc_class()
 import  _v6__qLog
 qLog  = _v6__qLog.qLog_class()
 
-qPLATFORM        = qRiKi.getValue('qPLATFORM'        )
 qRUNATTR         = qRiKi.getValue('qRUNATTR'         )
 qHOSTNAME        = qRiKi.getValue('qHOSTNAME'        )
 qUSERNAME        = qRiKi.getValue('qUSERNAME'        )
@@ -676,7 +675,7 @@ class main_bgm:
                 if (os.name == 'nt'):
                     #self.bgm_name = 'C:\\Users\\Public\\' + self.bgm_file
                     self.bgm_name = self.path_winos + self.bgm_file
-                elif (qPLATFORM == 'darwin'):
+                elif (sys.platform == 'darwin'):
                     #self.bgm_name = '/users/kondou/Documents/' + self.bgm_file
                     self.bgm_name = self.path_macos + self.bgm_file
                 else:

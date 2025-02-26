@@ -19,9 +19,6 @@ import glob
 
 
 
-import platform
-qPLATFORM = platform.system().lower() #windows,darwin,linux
-
 qRUNATTR  = 'python'
 if getattr(sys, 'frozen', False):
     qRUNATTR = 'exe'
@@ -210,7 +207,6 @@ class qRiKi_class:
         return True
 
     def getValue(self, field):
-        if (field == 'qPLATFORM'       ): return qPLATFORM
         if (field == 'qRUNATTR'        ): return qRUNATTR
         if (field == 'qHOSTNAME'       ): return qHOSTNAME
         if (field == 'qUSERNAME'       ): return qUSERNAME
@@ -466,10 +462,10 @@ class qRiKi_class:
 
         outLang = lang
         if (outLang == 'auto'):
-            if   (qPLATFORM == 'windows'):
+            if   (os.name == 'nt'):
                 #outLang = 'ja,winos,'
                 outLang = 'ja,hoya,'
-            elif (qPLATFORM == 'darwin'):
+            elif (sys.platform == 'darwin'):
                 outLang = 'ja,macos,'
             else:
                 outLang = 'ja,free,'

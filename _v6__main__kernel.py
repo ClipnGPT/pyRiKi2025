@@ -65,7 +65,6 @@ qLog  = _v6__qLog.qLog_class()
 import  _v6__qGuide
 qGuide= _v6__qGuide.qGuide_class()
 
-qPLATFORM        = qRiKi.getValue('qPLATFORM'        )
 qRUNATTR         = qRiKi.getValue('qRUNATTR'         )
 qHOSTNAME        = qRiKi.getValue('qHOSTNAME'        )
 qUSERNAME        = qRiKi.getValue('qUSERNAME'        )
@@ -152,9 +151,9 @@ runMode     = 'hud'
 qApiInp     = 'free'
 qApiTrn     = 'free'
 qApiOut     = qApiTrn
-if (qPLATFORM == 'windows'):
+if (os.name == 'nt'):
     qApiOut = 'winos'
-if (qPLATFORM == 'darwin'):
+if (sys.platform == 'darwin'):
     qApiOut = 'macos'
 qLangInp    = 'ja'
 #qLangTrn    = 'en,fr,'
@@ -337,7 +336,7 @@ class main_kernel:
             main_vision_switch   = 'on'
 
         python_exe = 'python'
-        if (qPLATFORM == 'darwin'):
+        if (sys.platform == 'darwin'):
             python_exe = 'python3'
 
         # 実行優先順位設定
@@ -835,7 +834,7 @@ if __name__ == '__main__':
 
     # 初期設定
 
-    if (qPLATFORM == 'darwin'):
+    if (sys.platform == 'darwin'):
         try:
             print('macOSでTKinterの利用設定　開始')
             subprocess.call(['/usr/bin/osascript', '-e',

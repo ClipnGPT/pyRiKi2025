@@ -42,7 +42,6 @@ qLog  = _v6__qLog.qLog_class()
 import  _v6__qFFmpeg
 qFFmpeg=_v6__qFFmpeg.qFFmpeg_class()
 
-qPLATFORM        = qRiKi.getValue('qPLATFORM'        )
 qRUNATTR         = qRiKi.getValue('qRUNATTR'         )
 qHOSTNAME        = qRiKi.getValue('qHOSTNAME'        )
 qUSERNAME        = qRiKi.getValue('qUSERNAME'        )
